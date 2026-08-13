@@ -2,6 +2,7 @@ let result = "";
 const buttonsGrid = document.querySelector(".buttons");
 const outputBox = document.querySelector(".output-box");
     buttonsGrid.addEventListener('click', (e) => {
+        if (!e.target.classList.contains('btn')) return;
         const buttonText = e.target.textContent;
         if (buttonText === "C"){
             result = "";
